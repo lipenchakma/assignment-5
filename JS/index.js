@@ -68,7 +68,7 @@ document.getElementById('donate-now-feni').addEventListener("click", function(){
     document.getElementById('total-donation').innerText= totalAmount - donateFeniValue;
     document.getElementById("my_modal_1").showModal();
     document.getElementById('donate-feni-input').value = (' ');
-    // history container
+    // history container section
     const date = new Date();
     const p = document.createElement('p');
     p.style.border='1px solid gray'
@@ -94,7 +94,7 @@ document.getElementById('donate-now-feni').addEventListener("click", function(){
     document.getElementById('quota-donate-amount').innerText = quotaDonateAmount + donateQuotaValue;
     document.getElementById("my_modal_1").showModal();
     document.getElementById('quota-donate-value').value = (' ');
-    // history container
+    // history container section
     const date = new Date();
     const p = document.createElement('p');
     p.style.border='1px solid gray'
