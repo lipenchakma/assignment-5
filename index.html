@@ -10,12 +10,13 @@
 </head>
 
 <body class="p-5">
-  <!-- Navbar Section start -->
+
+  <!-- Navbar Section-->
   <nav class="sticky top-0 backdrop-blur-lg">
     <div class="bg-[#F9F7F3] py-12">
       <div class="container mx-auto flex md:justify-between flex-col md:flex-row gap-3 items-center">
         <div>
-          <a id="blog" class="px-8 btn font-bold bg-[#B4F461] lg:text-lg">Blog</a>
+          <a id="blog-page" class="px-8 btn font-bold bg-[#B4F461] lg:text-lg">Blog</a>
         </div>
         <div class="font-bold lg:text-lg">
           <a class="flex items-center">
@@ -24,31 +25,35 @@
         </div>
         <div class="">
           <a class="flex gap-2 text-[#111111B3] font-bold lg:text-lg"><img src="./assets/coin.png" alt="" /><span
-              id="total-Amount">20000</span>BDT</a>
+              id="total-donation">30000</span>BDT</a>
         </div>
       </div>
     </div>
-    <!-- Navbar Section end -->
+
+    <!-- Donation button and History Button Section -->
     <section>
       <div class="my-10 inline-flex items-center justify-center w-full gap-5">
         <button id="donation-btn" class="btn font-bold text-xl bg-[#B4F461] px-10">
           Donation
         </button>
-        <button id="history-btn" class="btn font-bold text-xl px-10">History</button>
+        <button id="history-btn" class="btn font-bold text-xl px-10">
+          History
+        </button>
       </div>
     </section>
   </nav>
+
   <main class="container mx-auto">
-    <!-- main section start -->
     <section id="main-section" class="bg-white py-10 space-y-8">
-      <!-- donation Noakhali section Start-->
+      <!-- Donation Noakhali section-->
       <div class="lg:flex justify-between gap-12 border p-10 rounded-xl">
         <div class="lg:w-4/6 mb-8">
           <img class="w-full" src="./assets/noakhali.png" alt="" />
         </div>
         <div class="space-y-8 lg:w-5/6">
           <button class="btn text-lg">
-            <img src="./assets/coin.png" alt="" /> <span id="donate-amount-noakhali">1000</span>BTD
+            <img src="./assets/coin.png" alt="" />
+            <span id="donate-amount-noakhali">1000</span>BTD
           </button>
           <h2 class="text-2xl font-bold">
             Donate for Flood at Noakhali, Bangladesh
@@ -71,15 +76,15 @@
           </div>
         </div>
       </div>
-      <!-- donation Noakhali section End-->
-      <!-- donation Feni section start -->
+
+      <!-- Donation Feni section start -->
       <div class="lg:flex justify-between gap-12 border p-10 rounded-xl">
         <div class="lg:w-4/6 mb-8">
           <img class="w-full" src="./assets/feni.png" alt="" />
         </div>
         <div class="space-y-8 lg:w-5/6">
           <button class="btn text-lg">
-            <img src="./assets/coin.png" alt="" /> <span>1000</span>BTD
+            <img src="./assets/coin.png" alt="" /> <span id="feni-donate-amount">2000</span>BTD
           </button>
           <h2 class="text-2xl font-bold">
             Donate for Flood Relief in Feni,Bangladesh
@@ -95,24 +100,24 @@
             urgent need.
           </p>
           <div class="border rounded-lg text-lg">
-            <input class="w-full p-3" type="text" placeholder="Write Donation Amount" />
+            <input id="donate-feni-input" class="w-full p-3" type="text" placeholder="Write Donation Amount" />
           </div>
           <div>
-            <button id="donate-now" class="w-full text-lg btn bg-[#B4F461]">
+            <button id="donate-now-feni" class="w-full text-lg btn bg-[#B4F461]">
               Donate Now
             </button>
           </div>
         </div>
       </div>
-      <!-- donation Feni section end -->
-      <!-- donation Quota Movement start -->
+
+      <!-- Donation Quota Movement Section-->
       <div class="lg:flex justify-between gap-12 border p-10 rounded-xl">
         <div class="lg:w-4/6 mb-8">
           <img class="w-full" src="./assets/quota-protest.png" alt="" />
         </div>
         <div class="space-y-8 lg:w-5/6">
           <button class="btn text-lg">
-            <img src="./assets/coin.png" alt="" /> <span>2400</span>BTD
+            <img src="./assets/coin.png" alt="" /> <span id="quota-donate-amount">2400</span>BTD
           </button>
           <h2 class="text-2xl font-bold">
             Aid for Injured in the Quota Movement
@@ -129,31 +134,33 @@
             their time of need.
           </p>
           <div class="border rounded-lg text-lg">
-            <input class="w-full p-3" type="text" placeholder="Write Donation Amount" />
+            <input id="quota-donate-value" class="w-full p-3" type="text" placeholder="Write Donation Amount" />
           </div>
           <div>
-            <button class="w-full text-lg btn bg-[#B4F461]">
+            <button id="donate-quota-btn" class="w-full text-lg btn bg-[#B4F461]">
               Donate Now
             </button>
           </div>
         </div>
       </div>
-      <!-- donation Quota Movement end -->
     </section>
-    <!-- main card section end -->
-    <!-- history section -->
-    <section id="donation-history" class="hodden">
-      <h1 class="my-5 text-3xl font-bold text-blue-600 text-center">Donation History</h1>
-      <div id="donation-container" class="p-5 rounded-xl text-xl space-y-3">
 
-      </div>
+    <!-- history section -->
+    <section id="donation-history" class="hidden">
+      <h1 class="my-5 text-3xl font-bold text-blue-400 text-center">
+        Acount History
+      </h1>
+      <div id="donation-container" class="p-5 rounded-xl text-xl space-y-3"></div>
     </section>
+    
     <!-- modal -->
     <dialog id="my_modal_1" class="modal">
       <div class="modal-box">
         <div class="text-center">
           <h3 class="text-3xl font-bold">Congrats!</h3>
-          <h2 class="ml-48 mt-5"><img class="w-14" src="./assets/coin.png" alt=""></h2>
+          <h2 class="ml-48 mt-5">
+            <img class="w-14" src="./assets/coin.png" alt="" />
+          </h2>
           <p class="text-lg py-4">You Have Donated for Humankind</p>
           <p class="text-2xl font-bold py-4">Successfully</p>
         </div>
@@ -167,7 +174,7 @@
     </dialog>
   </main>
   <script src="./JS/index.js"></script>
-  <script src="./JS/function.js"></script>
+  <script src="./JS/utilities.js"></script>
 </body>
 
 </html>
